@@ -1,0 +1,17 @@
+<view class="container" style="background-image: url('images/back.png')">
+  <!-- <image  mode="widthFix" class='bg-image' src="images/back.png"></image> -->
+  <image  mode="widthFix" class='brand' src="images/brand.png"></image>   
+  <image  mode="widthFix" class='activity' src="images/activity.png"></image> 
+  <view class="container-out">
+  <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};"></view>
+  <view class="container-in">
+    <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;border: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+      <image class="award-image" src="{{item.imageAward}}"></image>
+    </view>
+   
+  </view>
+</view>
+  <view class='text'>*图片仅供参考，详情请以店内实物为准</view>
+  <image class="start-btn" bindtap="startGame"  mode="widthFix" class='button' src="images/button.png"></image> 
+  <image  mode="widthFix" class='details' src="images/details.png"></image>
+</view>
